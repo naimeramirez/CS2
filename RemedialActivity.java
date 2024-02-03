@@ -5,7 +5,6 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class RemedialActivity {
-
     public static int[] readValuesFromFile(String fileName) throws FileNotFoundException {
         Scanner fileScanner = new Scanner(new File(fileName));
         int numValues = fileScanner.nextInt();
