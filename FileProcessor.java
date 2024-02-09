@@ -12,7 +12,7 @@ public class FileProcessor {
         System.out.println();
 
         FingerPrint user = new FingerPrint("User1.txt");
-        System.out.println("User1 Fingerprint:");
+        System.out.println("User Fingerprint:");
         System.out.println("Name: " + user.getName());
         System.out.println("Year: " + user.getYear());
         System.out.println("Rows: " + user.getRows());
@@ -20,7 +20,6 @@ public class FileProcessor {
         System.out.println("Number of Pixels: " + user.getNumberOfPixels());
 
         // Compare fingerprints
-        System.out.println("\nComparison Result:");
-        System.out.println("Original and User fingerprints are equal: " + original.equals(user));
+        System.out.println("\nFingerprints are equal: " + original.equals(user));
     }
 }
