@@ -11,16 +11,16 @@ public class FileProcessor {
         System.out.println("Number of Pixels: " + original.getNumberOfPixels());
         System.out.println();
 
-        FingerPrint user1 = new FingerPrint("User1.txt");
+        FingerPrint user = new FingerPrint("User1.txt");
         System.out.println("User1 Fingerprint:");
-        System.out.println("Name: " + user1.getName());
-        System.out.println("Year: " + user1.getYear());
-        System.out.println("Rows: " + user1.getRows());
-        System.out.println("Cols: " + user1.getCols());
-        System.out.println("Number of Pixels: " + user1.getNumberOfPixels());
+        System.out.println("Name: " + user.getName());
+        System.out.println("Year: " + user.getYear());
+        System.out.println("Rows: " + user.getRows());
+        System.out.println("Cols: " + user.getCols());
+        System.out.println("Number of Pixels: " + user.getNumberOfPixels());
 
         // Compare fingerprints
         System.out.println("\nComparison Result:");
-        System.out.println("Original and User1 fingerprints are equal: " + original.equals(user1));
+        System.out.println("Original and User1 fingerprints are equal: " + original.equals(user));
     }
 }
