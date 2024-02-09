@@ -15,12 +15,6 @@ public class FingerPrint {
     public FingerPrint(String fileName) throws IOException {
         // Declare file handler.
         File file = new File(fileName);
-
-        if (!file.exists()) {
-            System.out.println("File not found: " + fileName);
-            return;
-        }
-
         Scanner input = new Scanner(file);
 
         //Read the file
@@ -58,6 +52,8 @@ public class FingerPrint {
     }
 
     //equals() method
+    //take as a parameter another FingerPrint object. Compare the data from both FingerPrint objects.
+    //Remember to compare each value of both 2D arrays
     public boolean equals(FingerPrint other) {
         if (other == null || this.rows != other.rows || this.cols != other.cols) {
             return false;
@@ -73,9 +69,6 @@ public class FingerPrint {
 
         return true;
     }
-
-    //take as a parameter another FingerPrint object. Compare the data from both FingerPrint objects.
-    //Remember to compare each value of both 2D arrays
 
     //getNumberOfPixels()
     public int getNumberOfPixels() {
