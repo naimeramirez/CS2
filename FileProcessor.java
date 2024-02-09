@@ -21,6 +21,6 @@ public class FileProcessor {
 
         // Compare fingerprints
         System.out.println("\nComparison Result:");
-        System.out.println("Original and User1 fingerprints are equal: " + original.equals(user));
+        System.out.println("Original and User fingerprints are equal: " + original.equals(user));
     }
 }
