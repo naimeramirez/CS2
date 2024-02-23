@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 import java.io.*;
 
@@ -61,7 +59,7 @@ public class FingerPrint {
 
         for (int row = 0; row < this.rows; row++) {
             for (int col = 0; col < this.cols; col++) {
-                if (!this.data[row][col].equals(other.data[row][col])) {
+                if (this.data[row][col] == null || !this.data[row][col].equals(other.data[row][col])) {
                     return false;
                 }
             }
@@ -69,6 +67,7 @@ public class FingerPrint {
 
         return true;
     }
+
 
     //getNumberOfPixels()
     public int getNumberOfPixels() {
