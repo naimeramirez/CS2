@@ -16,5 +16,13 @@ public class BSTTester {
         System.out.println("is 88 there? " + t.find(88));
         System.out.println("is 18 there? " + t.find(18));
         System.out.println("Total: " + t.size());
+        t.remove(13);
+        t.print();
+        System.out.println("Total leaves: " + t.totalLeaves());
+        System.out.println("Total parents: " + t.totalParents());
+        System.out.println("Height: " + t.getHeight());
+        t.printMin();
+        t.printMax();
     }
+
 }
