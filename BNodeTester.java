@@ -1,3 +1,5 @@
+import java.util.NoSuchElementException;
+
 public class BNodeTester {
     public static void main(String[] args) {
         //Definition/Declaration of BNode objects
@@ -20,14 +22,59 @@ public class BNodeTester {
         n3.right = n7;
         n6.right = n8;
         n7.left = n9;
-        preOrder(n1);
+        printPreOrder(n1);
+        printInOrder(n1);
+        printPostOrder(n1);
+        findMin(n1);
+        findMax(n1);
+        System.out.println(n1);
+//        System.out.println(n3);
+
     }
 
-    public static void preOrder(BNode R){
-        if(R != null) {
+    public static void printPreOrder(BNode R) {
+        if (R != null) {
             System.out.println(R.value);
-            preOrder(R.left);
-            preOrder(R.right);
+            printPreOrder(R.left);
+            printPreOrder(R.right);
         }
     }
+
+    public static void printInOrder(BNode R) {
+        if (R != null) {
+            printInOrder(R.left);
+            System.out.println(R.value);
+            printInOrder(R.right);
+        }
+    }
+
+    public static void printPostOrder(BNode R) {
+        if (R != null) {
+            printPostOrder(R.left);
+            printPostOrder(R.right);
+            System.out.println(R.value);
+        }
+    }
+
+    public static void findMin(BNode R) {
+        if (R != null) {
+            BNode current = R;
+            while (current.left != null) {
+                current = current.left;
+            }
+            System.out.println("Min: " + current.value);
+        }
+    }
+
+    public static void findMax(BNode R) {
+        if (R != null) {
+            BNode current = R;
+            while (current.right != null) {
+                current = current.right;
+            }
+            System.out.println("Min: " + current.value);
+        }
+    }
+
+
 }
